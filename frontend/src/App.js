@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import CategoryBar from './components/CategoryBar';
-import './App.css';
+import React, { useState } from "react";
+import CategoryBar from "./components/CategoryBar";
+import "./App.css";
 
 function App() {
     const [selectedCategory, setSelectedCategory] = useState("All");

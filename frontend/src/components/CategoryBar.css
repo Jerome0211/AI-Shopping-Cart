@@ -1,7 +1,9 @@
 .category-bar {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
     margin: 20px;
+    justify-content: center;
 }
 
 .category-button {
@@ -16,9 +18,4 @@
 
 .category-button:hover {
     background-color: #21a1f1;
-}
-
-.category-button:focus {
-    outline: none;
-    background-color: #1d91e0;
 }
