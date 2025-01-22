@@ -1,0 +1,24 @@
+.category-bar {
+    display: flex;
+    gap: 15px;
+    margin: 20px;
+}
+
+.category-button {
+    padding: 10px 15px;
+    background-color: #61dafb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #21a1f1;
+}
+
+.category-button:focus {
+    outline: none;
+    background-color: #1d91e0;
+}
