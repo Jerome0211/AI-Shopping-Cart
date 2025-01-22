@@ -1,0 +1,10 @@
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/AuthService.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/UserService.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/AuthBackendApplication.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/ProtectedController.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/SecurityConfig.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/AuthController.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/JwtAuthenticationFilter.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/User.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/JwtUtil.java
+/Users/jeromejiao/Desktop/AWS-Project/src/main/java/com/example/auth/UserRepository.java
