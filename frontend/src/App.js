@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CategoryBar from "./components/CategoryBar";
+import ItemList from "./components/ItemList";
 import "./App.css";
 
 function App() {
@@ -7,7 +8,6 @@ function App() {
 
     const handleCategorySelect = (category) => {
         setSelectedCategory(category);
-        console.log(`Selected Category: ${category}`);
     };
 
     return (
@@ -15,7 +15,7 @@ function App() {
             <header className="App-header">
                 <h1>Shopping Categories</h1>
                 <CategoryBar onSelectCategory={handleCategorySelect} />
-                <p>Currently Selected: {selectedCategory}</p>
+                <ItemList selectedCategory={selectedCategory} />
             </header>
         </div>
     );

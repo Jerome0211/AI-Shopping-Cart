@@ -5,7 +5,6 @@ import "./CategoryBar.css";
 const CategoryBar = ({ onSelectCategory }) => {
     const [categories, setCategories] = useState([]);
 
-    // 从 CSV 文件加载数据并提取类别
     const loadCategories = async () => {
         const fetchCSV = async (url) => {
             const response = await fetch(url);
@@ -19,19 +18,13 @@ const CategoryBar = ({ onSelectCategory }) => {
         };
 
         try {
-            // 加载 kickstart.csv 和 local warehouse.csv 数据
-            const kickstartData = await fetchCSV("/data/kickstart.csv");
             const warehouseData = await fetchCSV("/data/local_warehouse.csv");
+            const kickstartData = await fetchCSV("/data/kickstart.csv");
 
-            // 合并两个数据集
-            const combinedData = [...kickstartData, ...warehouseData];
-
-            // 提取所有类别
+            const combinedData = [...warehouseData, ...kickstartData];
             const allCategories = combinedData.map(
-                (item) => item.Category || item.category || "Uncategorized"
+                (item) => item.Category || "Uncategorized"
             );
-
-            // 去重并添加 "All" 选项
             const uniqueCategories = ["All", ...new Set(allCategories)];
             setCategories(uniqueCategories);
         } catch (error) {
