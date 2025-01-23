@@ -1,0 +1,57 @@
+/* 设置整体网格布局 */
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自动调整列数，最小宽度200px */
+    gap: 16px; /* 卡片之间的间距 */
+    padding: 16px; /* 列表整体的内边距 */
+}
+
+/* 单个 item-card 的样式 */
+.item-card {
+    background-color: #f9f9f9; /* 卡片背景颜色 */
+    border: 1px solid #ddd; /* 边框颜色 */
+    border-radius: 8px; /* 边框圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+    padding: 16px; /* 内边距 */
+    text-align: left; /* 文本左对齐 */
+    overflow: hidden; /* 防止内容溢出 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 卡片标题样式 */
+.item-card h3 {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem); /* 动态字体大小：最小0.9rem，最大1.2rem */
+    font-weight: bold;
+    margin: 0 0 8px;
+    color: #333; /* 标题字体颜色 */
+    word-wrap: break-word; /* 如果文字太长，自动换行 */
+}
+
+/* 卡片内的价格和折扣 */
+.item-card p {
+    font-size: clamp(0.8rem, 2vw, 1rem); /* 动态字体大小：最小0.8rem，最大1rem */
+    margin: 4px 0;
+    color: #666; /* 描述文字的颜色 */
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    .item-list {
+        padding: 12px; /* 小屏幕时减少边距 */
+        gap: 12px; /* 小屏幕时减少间距 */
+    }
+    .item-card {
+        padding: 12px; /* 缩小卡片内边距 */
+    }
+}
+
+@media (max-width: 480px) {
+    .item-card h3 {
+        font-size: clamp(0.8rem, 2vw, 1rem); /* 缩小标题字体大小 */
+    }
+    .item-card p {
+        font-size: clamp(0.7rem, 1.8vw, 0.9rem); /* 缩小描述字体大小 */
+    }
+}
